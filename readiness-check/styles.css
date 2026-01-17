@@ -24,7 +24,8 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
     line-height: 1.6;
     color: var(--color-text);
     background: var(--color-background);
@@ -43,7 +44,7 @@ body {
 
 /* Header */
 header {
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
     padding-bottom: 30px;
     border-bottom: 2px solid var(--color-border);
@@ -51,13 +52,16 @@ header {
 
 h1 {
     font-size: 2.5rem;
+    font-weight: 700;
     color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 .subtitle {
     font-size: 1.1rem;
+    font-weight: 400;
     color: var(--color-muted);
+    line-height: 1.6;
 }
 
 /* Instructions */
@@ -72,7 +76,7 @@ h1 {
     display: flex;
     justify-content: space-between;
     max-width: 400px;
-    margin: 0 auto 30px;
+    margin: 0 0 30px 0;
     padding: 15px;
     background: var(--color-accent-light);
     border-radius: 8px;
@@ -107,7 +111,7 @@ h1 {
 .rating-scale {
     display: flex;
     gap: 15px;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
@@ -137,7 +141,7 @@ h1 {
 .button-group {
     display: flex;
     gap: 15px;
-    justify-content: center;
+    justify-content: flex-start;
     margin-top: 40px;
     flex-wrap: wrap;
 }
@@ -194,14 +198,15 @@ h1 {
 }
 
 #results-section h2 {
-    text-align: center;
+    text-align: left;
+    font-weight: 700;
     color: var(--color-primary);
     font-size: 2rem;
     margin-bottom: 30px;
 }
 
 .score-display {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     padding: 30px;
     background: var(--color-accent);
@@ -221,7 +226,7 @@ h1 {
 }
 
 .readiness-band {
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
     font-weight: 700;
     padding: 20px;
@@ -260,6 +265,7 @@ h1 {
 
 #results-section h3 {
     font-size: 1.4rem;
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: 15px;
 }
@@ -292,11 +298,12 @@ h1 {
     padding: 30px;
     border-radius: 8px;
     margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
     border: 2px solid var(--color-accent);
 }
 
 .share-cta h3 {
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: 10px;
 }
@@ -330,13 +337,14 @@ h1 {
 }
 
 #share-form-container h3 {
-    text-align: center;
+    text-align: left;
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: 10px;
 }
 
 #share-form-container > p {
-    text-align: center;
+    text-align: left;
     margin-bottom: 25px;
     color: var(--color-muted);
 }
@@ -375,7 +383,7 @@ h1 {
 
 /* Success Message */
 #success-message {
-    text-align: center;
+    text-align: left;
     padding: 30px;
     background: var(--color-accent-light);
     border: 2px solid var(--color-accent);
@@ -384,6 +392,7 @@ h1 {
 }
 
 #success-message h3 {
+    font-weight: 600;
     color: var(--color-primary);
     margin-bottom: 10px;
 }
@@ -403,7 +412,7 @@ h1 {
 
 #retake-btn {
     display: block;
-    margin: 30px auto 0;
+    margin: 30px 0 0;
 }
 
 /* Mobile Responsiveness */
@@ -423,7 +432,7 @@ h1 {
     .scale-legend {
         flex-direction: column;
         gap: 5px;
-        text-align: center;
+        text-align: left;
     }
 
     .question-block {
