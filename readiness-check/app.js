@@ -215,33 +215,33 @@ shareBtn.addEventListener('click', function() {
 shareForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    // In a real implementation, you would submit the form via AJAX
-    // For now, we'll show the success message without actually submitting
-
-    // Simulate form submission
-    shareForm.classList.add('hidden');
-    successMessage.classList.remove('hidden');
-
-    // Scroll to success message
-    successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // Uncomment below to actually submit the form via AJAX
-    /*
+    // Submit form via AJAX to Formspree
     const formData = new FormData(shareForm);
 
     fetch(shareForm.action, {
         method: 'POST',
-        body: formData
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
     })
-    .then(response => response.json())
-    .then(data => {
-        shareForm.classList.add('hidden');
-        successMessage.classList.remove('hidden');
-        successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    .then(response => {
+        if (response.ok) {
+            shareForm.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+            return response.json().then(data => {
+                if (data.errors) {
+                    alert('There was an error submitting your results: ' + data.errors.map(error => error.message).join(', '));
+                } else {
+                    alert('There was an error submitting your results. Please try again.');
+                }
+            });
+        }
     })
     .catch(error => {
         alert('There was an error submitting your results. Please try again.');
         console.error('Error:', error);
     });
-    */
 });
