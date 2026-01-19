@@ -399,6 +399,21 @@ h1 {
 
 #success-message p {
     color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+#success-message p:last-child {
+    margin-bottom: 0;
+}
+
+#success-message a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    word-break: break-all;
+}
+
+#success-message a:hover {
+    color: var(--color-text);
 }
 
 /* Utility Classes */
