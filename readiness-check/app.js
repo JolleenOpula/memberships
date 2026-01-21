@@ -11,7 +11,7 @@ const QUESTIONS = [
     "How ready are you to show up consistently and deliver value to your members for years?",
     "How ready are you to create a weekly or monthly rhythm that you could maintain long term?",
     "How well can you define the reason someone should join your membership  rather than other similar memberships?",
-    "How well do you understand the key metrics (eg retention, church, lifetime value) behind a successful membership?",
+    "How well do you understand the key metrics (eg retention, churn, lifetime value) behind a successful membership?",
     "How clear are you on how the membership fits into your larger business model?",
     "How confident do you feel offering leadership and guidance to a group?",
     "How comfortable are you with growing slowly instead of expecting overnight success?"
